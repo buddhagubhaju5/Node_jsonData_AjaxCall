@@ -1,18 +1,1 @@
-[
-  {
-    "firstName": "Buddha",
-    "lastName": "Gubhaju",
-    "id": "01",
-    "salary": "1500",
-    "department": "technician",
-    "email": "buddhagubhaju5@gmail.com"
-  },
-  {
-    "firstName": "Sabita",
-    "lastName": "GC",
-    "id": "002",
-    "salary": "12200",
-    "department": "tech",
-    "email": "sabitagc93@gmail.com"
-  }
-]
+[]
