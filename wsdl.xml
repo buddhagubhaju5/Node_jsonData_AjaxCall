@@ -1,0 +1,32 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns="http://localhost:3000/api/employees"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://localhost:3000/api/employees">
+    <message name="EmployeeRequest">
+        <part name="employee" type="xsd:string"/>
+    </message>
+    <message name="EmployeeResponse">
+        <part name="response" type="xsd:string"/>
+    </message>
+    <portType name="EmployeePortType">
+        <operation name="StoreEmployee">
+            <input message="tns:EmployeeRequest"/>
+            <output message="tns:EmployeeResponse"/>
+        </operation>
+    </portType>
+    <binding name="EmployeeBinding" type="tns:EmployeePortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="StoreEmployee">
+            <soap:operation soapAction="http://localhost:3000/api/employees/StoreEmployee"/>
+            <input><soap:body use="literal"/></input>
+            <output><soap:body use="literal"/></output>
+        </operation>
+    </binding>
+    <service name="EmployeeService">
+        <documentation>Web Service for Employee Management</documentation>
+        <port name="EmployeePort" binding="tns:EmployeeBinding">
+            <soap:address location="http://localhost:3000/api/employees"/>
+        </port>
+    </service>
+</definitions>

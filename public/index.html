@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <style>
+        /* Embedded CSS for box model and responsive design */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management</h1>
+        <form id="employeeForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="Enter first name" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Enter last name" required>
+
+            <label for="id">Employee ID:</label>
+            <input type="text" id="id" placeholder="Enter employee ID" required>
+
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" placeholder="Enter salary" required>
+
+            <label for="department">Department:</label>
+            <input type="text" id="department" placeholder="Enter department" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <script src="script.js"></script>
+
+    </div>
+</body>
+</html>
